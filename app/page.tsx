@@ -20,12 +20,15 @@ export default function ClockPage() {
   return (
     <main className="min-h-screen bg-background flex items-center justify-center">
       <div className="text-center">
-        <div className="font-mono text-8xl md:text-9xl font-bold tracking-tight text-foreground">
-          {hours}
-          <span className="animate-pulse">:</span>
-          {minutes}
-          <span className="animate-pulse">:</span>
-          {seconds}
+        <div className="font-mono text-8xl md:text-9xl font-bold tracking-tight">
+          <span className="text-red-500">{hours[0]}</span>
+          <span className="text-orange-500">{hours[1]}</span>
+          <span className="text-yellow-500 animate-pulse">:</span>
+          <span className="text-green-500">{minutes[0]}</span>
+          <span className="text-cyan-500">{minutes[1]}</span>
+          <span className="text-blue-500 animate-pulse">:</span>
+          <span className="text-violet-500">{seconds[0]}</span>
+          <span className="text-pink-500">{seconds[1]}</span>
         </div>
         <p className="mt-4 text-muted-foreground text-lg">
           {time.toLocaleDateString("en-US", {
